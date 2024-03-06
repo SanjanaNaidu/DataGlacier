@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h2>Prediction of Species</h2>
+        </div>
+    </header>
+    <div class="Sp_container">
+        <form action="{{ url_for('predict') }}" method="POST">
+           
+            <input type="text" name="sepal_length" placeholder="Sepal Length">
+            <input type="text" name="sepal_width" placeholder="Sepal Width">
+            <input type="text" name="petal_length" placeholder="Petal Length">
+            <input type="text" name="petal_width" placeholder="Petal Width">
+            <input type="submit" value="Submit">
+            <!-- Placeholder for prediction result -->
+            {% if prediction_text %}
+            <p>Prediction: {{ prediction_text }}</p>
+            {% endif %}
+
+        </form>
+    </div>
+</body>
+</html>
