@@ -1,0 +1,5 @@
+PS C:\Users\sanja\Desktop\Data Glacier Week6> python data_ingestion.py
+Pandas took 1.3963592052459717 seconds.
+Dask took 0.0 seconds.
+Modin with Ray took 0.0 seconds.
+{'Total rows': 558837, 'Total columns': 16, 'File size': 19437966}
